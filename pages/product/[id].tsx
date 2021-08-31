@@ -10,8 +10,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     if (query.id) {
-      window
-        .fetch(`/api/avo/${query.id}`)
+        fetch(`/api/avo/${query.id}`)
         .then((response) => response.json())
         .then((data: TProduct) => {
           setProduct(data)
