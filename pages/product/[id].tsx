@@ -4,8 +4,7 @@ import { GetStaticProps } from 'next';
 import Layout from '@components/Layout/Layout';
 import ProductSummary from '@components/ProductSummary/ProductSummary';
 
-// Página dinamica with getStaticPaths
-
+// Página dinámica with getStaticPaths
 export const getStaticPaths = async () => {
   const res = await fetch('https://platzi-avo.vercel.app/api/avo');
   const { data: productList }: TAPIAvoResponse = await res.json();
